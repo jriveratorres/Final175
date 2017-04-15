@@ -7,9 +7,19 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include "card.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    deck newDeck = allcards();
+    card* temp = newDeck.head;
+    while (temp != NULL){
+        printcard(temp);
+        temp = temp->listp;
+    }
     printf("Hello, World!\n");
     return 0;
 }
+
