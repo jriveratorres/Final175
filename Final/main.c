@@ -10,14 +10,33 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <time.h>
 #include "card.h"
 
 int main(int argc, const char * argv[]) {
-    deck newDeck = allcards();
+    deck newDeck = createdeck();
     card* temp = newDeck.head;
+    int counter = 0;
     while (temp != NULL){
         printcard(temp);
         temp = temp->listp;
+        counter++;
+        if (counter%13 == 0){
+            printf("\n");
+        }
+    }
+    //srand(time(0));
+    counter = 13;
+    shuffledeck(&newDeck);
+    temp = newDeck.head;
+    printf("\n\nShuffled deck: \n");
+    while (temp != NULL){
+        printcard(temp);
+        temp = temp->listp;
+        counter++;
+        if (counter%13 == 0){
+            printf("\n");
+        }
     }
     printf("Hello, World!\n");
     return 0;

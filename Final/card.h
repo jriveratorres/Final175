@@ -26,9 +26,11 @@ typedef struct deck{
 card* createcard(int suit, int face);
 void cardswap(deck* cards, card* first, card* second);
 void insertcard(deck* cards, card* newcard);
-deck allcards();
+deck createdeck();
 void removecard(deck* cards, card* remove);
 void printcard(card* printer);
+card* cardat(deck *cards, int location);
+void shuffledeck(deck* cards);
 
 //remove cards
 //print card
