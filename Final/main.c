@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
             printf("\n");
         }
     }
-    //srand(time(0));
+    srand(time(0));
     counter = 13;
     shuffledeck(&newDeck);
     temp = newDeck.head;
@@ -38,7 +38,6 @@ int main(int argc, const char * argv[]) {
             printf("\n");
         }
     }
-    printf("Hello, World!\n");
     return 0;
 }
 

@@ -180,8 +180,6 @@ void shuffledeck(deck* cards){
             }
         }
     }
-    
-    
     return;
 }
     
