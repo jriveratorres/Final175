@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		803E084D1EA1909C0030051D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 803E084C1EA1909C0030051D /* main.c */; };
 		803E08551EA190D60030051D /* card.c in Sources */ = {isa = PBXBuildFile; fileRef = 803E08531EA190D60030051D /* card.c */; };
+		80D0AD0E1EAAD3CA008E93DB /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 80D0AD0C1EAAD3CA008E93DB /* game.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		803E084C1EA1909C0030051D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		803E08531EA190D60030051D /* card.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = card.c; sourceTree = "<group>"; };
 		803E08541EA190D60030051D /* card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = card.h; sourceTree = "<group>"; };
+		80D0AD0C1EAAD3CA008E93DB /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = game.c; sourceTree = "<group>"; };
+		80D0AD0D1EAAD3CA008E93DB /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				803E084C1EA1909C0030051D /* main.c */,
+				80D0AD0C1EAAD3CA008E93DB /* game.c */,
+				80D0AD0D1EAAD3CA008E93DB /* game.h */,
 				803E08531EA190D60030051D /* card.c */,
 				803E08541EA190D60030051D /* card.h */,
 			);
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D0AD0E1EAAD3CA008E93DB /* game.c in Sources */,
 				803E084D1EA1909C0030051D /* main.c in Sources */,
 				803E08551EA190D60030051D /* card.c in Sources */,
 			);
@@ -254,6 +260,7 @@
 				803E08521EA1909C0030051D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -38,6 +38,7 @@ void insertcard(deck* cards, card* newcard){
         last = last->listp;
     }
     last->listp = newcard;
+    newcard->listp = NULL;
     (cards->size)++;
     return;
 }
@@ -100,6 +101,7 @@ void removecard(deck* cards, card* remove){
     card* beforecard= cards->head;
     if (beforecard == remove){
         cards->head = remove->listp;
+        remove->listp = NULL;
         (cards->size)--;
         return;
     }
@@ -107,6 +109,7 @@ void removecard(deck* cards, card* remove){
         beforecard = beforecard->listp;
     }
     beforecard->listp = remove->listp;
+    remove->listp = NULL; //I added this line later, but it should still work
     (cards->size)--;
     return;
 }
@@ -181,6 +184,13 @@ void shuffledeck(deck* cards){
         }
     }
     return;
+}
+
+/*
+ * Write function later to print deck
+ */
+void printdeck(deck cards){
+    
 }
     
     

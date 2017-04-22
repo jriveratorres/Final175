@@ -31,6 +31,7 @@ void removecard(deck* cards, card* remove);
 void printcard(card* printer);
 card* cardat(deck *cards, int location);
 void shuffledeck(deck* cards);
+void printdeck(deck cards);
 
 //remove cards
 //print card
