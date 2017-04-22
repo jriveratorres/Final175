@@ -120,7 +120,9 @@ void playerchoose(players* player, players* lastplayer, int gametype){
     insertcard(&player->hand, newcard);
     eliminatepairs(player, gametype);
     shuffledeck(&player->hand);
+    printf("This is your new hand:");
     printdeck(player->hand);
+    printf("\n");
     return;
 }
 void computerchoose(players* computer, players* lastplayer, int gametype){

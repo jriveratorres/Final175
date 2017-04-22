@@ -63,6 +63,9 @@ int main(int argc, const char * argv[]) {
     while (isgameplaying(play)){
         playerchoose(currplayer, getlastplayer(currplayer), 0);
         currplayer = currplayer->next;
+#ifdef __APPLE__
+        sleep(2);
+#endif
     }
     return 0;
 }
