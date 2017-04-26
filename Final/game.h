@@ -29,6 +29,8 @@ void playerchoose(players* player, players* lastplayer, int gametype);
 void computerchoose(players* computer, players* lastplayer, int gametype);
 players* getlastplayer(players* currentplayer);
 int isgameplaying(players* humans);
+players* getloser(players* player1);
+void deletePlayers(players* player1);
 
 
 #endif /* game_h */

@@ -84,7 +84,7 @@ void eliminatepairs(players* currentplayer, int gametype){
                 printcard(currcard);
                 printcard(comparecard);
                 printf("\n");
-                free(comparecard);
+                free(comparecard);  //avoid memory leaks
                 free(currcard);
                 break;
             }
@@ -102,7 +102,7 @@ void playerchoose(players* player, players* lastplayer, int gametype){
         computerchoose(player, lastplayer, gametype);
         return;
     }
-    printf("This is your hand: \n");
+    printf("%s, this is your hand: \n", player->name);
     printdeck(player->hand);
     printf("\n%s has %d cards\n", lastplayer->name, lastplayer->hand.size);
     int i = 0, choose = 0;
@@ -111,7 +111,7 @@ void playerchoose(players* player, players* lastplayer, int gametype){
         printf("%d ", i);
     }
     do{
-        printf("\nSelect a card between 1 and %d: ", lastplayer->hand.size);
+        printf("\n%s, select a card between 1 and %d: ", player->name, lastplayer->hand.size);
         scanf("%d", &choose);
     }while (choose > lastplayer->hand.size || choose < 1);
     
@@ -165,4 +165,27 @@ int isgameplaying(players* humans){
         return 0;
     }
     return 1;
+}
+
+players* getloser(players* player1){
+    players* temp = player1;
+    while (1){
+        if (temp->hand.size == 1){
+            break;
+        }
+        temp = temp->next;
+    }
+    return temp;
+}
+
+void deletePlayers(players* player1){
+    players *last = player1->last, *temp;
+    last->next = NULL;
+    player1->last = NULL;
+    while (player1 != NULL){
+        temp = player1;
+        player1 = player1->next;
+        free(temp); //free allocated memory for each player
+    }
+    return;
 }

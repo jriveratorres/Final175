@@ -190,7 +190,19 @@ void shuffledeck(deck* cards){
  * Write function later to print deck
  */
 void printdeck(deck cards){
-    
+    card *currcard = cards.head;
+    int counter = 0;
+    printf("\n");
+    while (currcard != NULL){
+        printcard(currcard);
+        currcard = currcard->listp;
+        printf(" ");
+        counter++;
+        if (counter % 13 == 0){
+            printf("\n");
+        }
+    }
+    return;
 }
     
     
